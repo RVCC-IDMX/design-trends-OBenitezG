@@ -1,0 +1,116 @@
+/* CSS Rest */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* After reset */ 
+
+* {
+    background-color: hsl(0, 0%, 13%);
+    margin: 0;
+    padding: 0;
+    font-family: 'Unica One', cursive;
+}
+
+main {
+    margin: 5%;
+    color: hsl(0, 0%, 96%);
+    display:grid;
+    gap: 3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 400px);
+}
+
+.header {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+h3 {
+   text-align: center;
+    color: hsl(0, 0%, 87%);
+}
+
+.photo-tower {
+    grid-row: span 2;
+}
+
+.lorem-ipsum {
+    font-size: 1.4em;
+    padding-top: 3em;
+    grid-column: span 2;
+    text-align: center;
+    max-width: 60em;
+}
+
+.photo-tower__img {
+    height: 100%;
+    width: 100%;
+}
+
+.photo-square__img {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
